@@ -7,7 +7,7 @@ export const addOneContact = async () => {
     const data = await readContacts();
     let existingContacts = [];
     if (data) {
-      existingContacts = JSON.parse(data);
+      existingContacts = data;
     }
     const newContacts = createFakeContact();
     const allContacts = [...existingContacts, newContacts];

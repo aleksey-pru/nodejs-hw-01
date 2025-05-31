@@ -5,7 +5,7 @@ import fs from 'node:fs/promises';
 export const removeLastContact = async () => {
   try {
     const data = await readContacts();
-    const parsedData = JSON.parse(data);
+    const parsedData = data;
     if (parsedData.length > 0) {
       const removedContact = parsedData.pop();
       await fs.writeFile(PATH_DB, JSON.stringify(parsedData, null, 2), 'utf-8');

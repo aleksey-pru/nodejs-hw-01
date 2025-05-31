@@ -7,7 +7,7 @@ const generateContacts = async (number) => {
     const data = await readContacts();
     let existingContacts = [];
     if (data) {
-      existingContacts = JSON.parse(data);
+      existingContacts = data;
     }
     const newContacts = [];
     for (let i = 0; i < number; i++) {
